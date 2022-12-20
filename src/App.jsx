@@ -41,6 +41,7 @@ export default function App() {
 	}
 
 	function deleteNote(event, noteId) {
+    event.stopPropagation()
 		setNotes(oldNotes => oldNotes.filter(oldNote => oldNote.id !== noteId));
 	}
 
