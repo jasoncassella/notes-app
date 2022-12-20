@@ -13,10 +13,6 @@ export default function App() {
 		(notes[0] && notes[0].id) || ''
 	);
 
-	const [state, setState] = React.useState(() =>
-		console.log('state initialization')
-	);
-
 	React.useEffect(() => {
 		localStorage.setItem('notes', JSON.stringify(notes));
 	}, [notes]);
